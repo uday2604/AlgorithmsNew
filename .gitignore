@@ -3,6 +3,8 @@
 
 #Output Files:
 out/
+bin/
+target/
 
 #Ignore IML Files:
 *.iml
