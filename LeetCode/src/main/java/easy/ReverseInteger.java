@@ -1,8 +1,5 @@
 package easy;
 
-import med.IntegerToRoman;
-import org.testng.Assert;
-
 import static org.testng.Assert.assertEquals;
 
 /**
