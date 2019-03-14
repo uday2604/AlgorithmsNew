@@ -33,11 +33,8 @@ public class LevelOrderTraversal {
         }
     }
 
-    public static void printLevelOrderTraversal(random.trees.BinaryTreeNode root) {
-
-        if (root == null)
-            return;
-        else {
+    private static void printLevelOrderTraversal(random.trees.BinaryTreeNode root) {
+        if (root != null) {
             Queue<random.trees.BinaryTreeNode> nodeStoreQueue = new LinkedList<>();
             nodeStoreQueue.offer(root);
 
@@ -55,9 +52,7 @@ public class LevelOrderTraversal {
         }
     }
 
-
-    public Stack<Integer> printElementsInReverseOrder(BinaryTreeNode root) {
-
+    private Stack<Integer> printElementsInReverseOrder(BinaryTreeNode root) {
         if (root == null)
             return null;
         else {
@@ -80,18 +75,15 @@ public class LevelOrderTraversal {
         }
     }
 
-
-    public Stack<Integer> levelOrderTraversalInvertedOrder(BinaryTreeNode root) {
-
-        if (root == null)
+    private Stack<Integer> levelOrderTraversalInvertedOrder(BinaryTreeNode root) {
+        if (root == null) {
             return null;
-        else {
+        } else {
             Stack<Integer> outputStack = new Stack<>();
             Queue<BinaryTreeNode> nodeStoreQueue = new LinkedList<>();
             nodeStoreQueue.offer(root);
 
             while (!nodeStoreQueue.isEmpty()) {
-
                 BinaryTreeNode temp = nodeStoreQueue.poll();
                 outputStack.push(temp.data);
 
