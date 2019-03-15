@@ -112,5 +112,4 @@ public class InOrderTraversal {
         System.out.println("\n" + outputList2);
 
     }
-
 }
