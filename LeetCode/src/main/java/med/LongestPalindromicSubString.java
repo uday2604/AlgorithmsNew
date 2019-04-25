@@ -6,10 +6,11 @@ package med;
  */
 public class LongestPalindromicSubString {
 
-    public static String longestPalindrome(String testString) {
+    private static String longestPalindrome(String testString) {
 
-        if (testString == null || testString.length() <= 1 || testString.equals(""))
+        if (testString == null || testString.length() <= 1 || testString.equals("")) {
             return testString;
+        }
 
         int startPointer = 0;
         int endPointer = testString.length() - 1;

@@ -38,8 +38,8 @@ public class LetterCombinationsPhoneNumber {
 
             // add all the new characters (from the current digit array) to all the elements of the current result array
             for (String str : resultList) {
-                for (int j = 0; j < numCharArray.length; j++) {
-                    tempList.add(str + numCharArray[j]);
+                for (Character ch : numCharArray) {
+                    tempList.add(str + ch);
                 }
             }
             resultList = tempList;

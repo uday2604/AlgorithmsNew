@@ -38,7 +38,7 @@ public class ThreeSumZero {
 
             while (firstPointer < endPointer) {
                 if (nums[i] + nums[firstPointer] + nums[endPointer] == 0) {
-                    resultList.add(new ArrayList<Integer>(Arrays.asList(nums[i], nums[firstPointer], nums[endPointer])));
+                    resultList.add(new ArrayList<>(Arrays.asList(nums[i], nums[firstPointer], nums[endPointer])));
                     firstPointer++;
                     endPointer--;
                     while (firstPointer < endPointer && nums[firstPointer] == nums[firstPointer - 1]) {   // increment the first pointer till it encounters a different element (in order to avoid duplicates)
