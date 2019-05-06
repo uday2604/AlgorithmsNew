@@ -12,7 +12,7 @@ package med;
  * Explanation: 342 + 465 = 807.
  * </p>
  */
-public class Add2NumLL {
+public class _2_Add2NumLL {
 
     private Node head;
 
@@ -100,12 +100,12 @@ public class Add2NumLL {
         Node head = new Node(2);
         Node head2 = new Node(5);
 
-        Add2NumLL add2NumLL = new Add2NumLL();
+        _2_Add2NumLL add2NumLL = new _2_Add2NumLL();
         add2NumLL.addToLast(head);
         add2NumLL.addToLast(new Node(4));
         add2NumLL.addToLast(new Node(3));
 
-        Add2NumLL add2NumLL2 = new Add2NumLL();
+        _2_Add2NumLL add2NumLL2 = new _2_Add2NumLL();
         add2NumLL2.addToLast(head2);
         add2NumLL2.addToLast(new Node(6));
         add2NumLL2.addToLast(new Node(4));
@@ -113,7 +113,7 @@ public class Add2NumLL {
         printList(head);
         printList(head2);
 
-        Node resultHead = Add2NumLL.add2Numbers(head, head2);
+        Node resultHead = _2_Add2NumLL.add2Numbers(head, head2);
         System.out.println();
         printList(resultHead);
 
@@ -128,7 +128,7 @@ public class Add2NumLL {
         printList(head3);
         printList(head4);
 
-        Node resultHead2 = Add2NumLL.add2Numbers(head3, head4);
+        Node resultHead2 = _2_Add2NumLL.add2Numbers(head3, head4);
         System.out.println();
         printList(resultHead2);
 
@@ -144,7 +144,7 @@ public class Add2NumLL {
         printList(head5);
         printList(head6);
 
-        Node resultHead3 = Add2NumLL.add2Numbers(head5, head6);
+        Node resultHead3 = _2_Add2NumLL.add2Numbers(head5, head6);
         System.out.println();
         printList(resultHead3);
     }

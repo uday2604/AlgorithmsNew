@@ -10,7 +10,7 @@ package med;
  * Output: 49
  * </p>
  */
-public class ContainerMostWater {
+public class _11_ContainerMostWater {
 
     // NOTE: time complexity: O(n2), space complexity: O(1)
     private static int getMaxContainerArea(int[] containerArray) {

@@ -3,7 +3,7 @@ package med;
 /**
  * Created by udaythota on 1/17/19.
  */
-public class RemoveNthNodeFromEndLL {
+public class _19_RemoveNthNodeFromEndLL {
     private Node head;
 
     private static class Node {
@@ -76,7 +76,7 @@ public class RemoveNthNodeFromEndLL {
 
         // CASE 1:
         Node head = new Node(1);
-        RemoveNthNodeFromEndLL removeNthNodeFromEndLL = new RemoveNthNodeFromEndLL();
+        _19_RemoveNthNodeFromEndLL removeNthNodeFromEndLL = new _19_RemoveNthNodeFromEndLL();
         removeNthNodeFromEndLL.addToLast(head);
         removeNthNodeFromEndLL.addToLast(new Node(2));
         removeNthNodeFromEndLL.addToLast(new Node(3));
@@ -89,7 +89,7 @@ public class RemoveNthNodeFromEndLL {
 
         // CASE 2:
         Node head1 = new Node(1);
-        RemoveNthNodeFromEndLL removeNthNodeFromEndLL2 = new RemoveNthNodeFromEndLL();
+        _19_RemoveNthNodeFromEndLL removeNthNodeFromEndLL2 = new _19_RemoveNthNodeFromEndLL();
         removeNthNodeFromEndLL2.addToLast(head1);
         removeNthNodeFromEndLL2.addToLast(new Node(2));
 
@@ -99,7 +99,7 @@ public class RemoveNthNodeFromEndLL {
 
         // CASE 3:
         Node head3 = new Node(1);
-        RemoveNthNodeFromEndLL removeNthNodeFromEndLL3 = new RemoveNthNodeFromEndLL();
+        _19_RemoveNthNodeFromEndLL removeNthNodeFromEndLL3 = new _19_RemoveNthNodeFromEndLL();
         removeNthNodeFromEndLL3.addToLast(head3);
         removeNthNodeFromEndLL3.addToLast(new Node(2));
 
@@ -109,7 +109,7 @@ public class RemoveNthNodeFromEndLL {
 
         // CASE 4:
         Node head4 = new Node(1);
-        RemoveNthNodeFromEndLL removeNthNodeFromEndLL4 = new RemoveNthNodeFromEndLL();
+        _19_RemoveNthNodeFromEndLL removeNthNodeFromEndLL4 = new _19_RemoveNthNodeFromEndLL();
         removeNthNodeFromEndLL4.addToLast(head4);
         removeNthNodeFromEndLL4.addToLast(new Node(2));
         removeNthNodeFromEndLL4.addToLast(new Node(3));
@@ -120,7 +120,7 @@ public class RemoveNthNodeFromEndLL {
 
         // CASE 5:
         Node head5 = new Node(1);
-        RemoveNthNodeFromEndLL removeNthNodeFromEndLL5 = new RemoveNthNodeFromEndLL();
+        _19_RemoveNthNodeFromEndLL removeNthNodeFromEndLL5 = new _19_RemoveNthNodeFromEndLL();
         removeNthNodeFromEndLL5.addToLast(head5);
         removeNthNodeFromEndLL5.addToLast(new Node(2));
         removeNthNodeFromEndLL5.addToLast(new Node(3));

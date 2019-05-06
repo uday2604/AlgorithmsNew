@@ -11,7 +11,7 @@ import static org.testng.AssertJUnit.assertTrue;
  * Input: -121 Output: false Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
  * </p>
  */
-public class PalindromeNumber {
+public class _9_PalindromeNumber {
 
     // see the below solution for the most optimal implementation
     private static boolean isPalindrome(int inputNumber) {

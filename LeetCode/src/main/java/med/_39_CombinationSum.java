@@ -16,7 +16,7 @@ import static org.junit.Assert.assertEquals;
  * [[7],[2,2,3]]
  * </p>
  */
-public class CombinationSum {
+public class _39_CombinationSum {
 
     private static List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> resultList = new ArrayList<>();

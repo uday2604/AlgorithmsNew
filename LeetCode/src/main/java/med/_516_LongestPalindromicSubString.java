@@ -4,7 +4,7 @@ package med;
  * Created by udaythota on 1/18/19.
  * TODO: this is wrong. redo it
  */
-public class LongestPalindromicSubString {
+public class _516_LongestPalindromicSubString {
 
     private static String longestPalindrome(String testString) {
 

@@ -9,7 +9,7 @@ import static org.testng.Assert.assertEquals;
  * Input: ["flower","flow","flight"]  Output: "fl"
  * </p>
  */
-public class LongestCommonPrefix {
+public class _14_LongestCommonPrefix {
 
     private static String longestCommonPrefix(String[] inputStrings) {
 

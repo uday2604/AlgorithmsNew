@@ -16,7 +16,7 @@ import static org.testng.Assert.assertEquals;
  * Output: 4193
  * </p>
  */
-public class StringToInteger {
+public class _8_StringToInteger {
 
     private static int myAtoi(String str) {
 

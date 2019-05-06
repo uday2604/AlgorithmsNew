@@ -14,7 +14,7 @@ import java.util.List;
  * Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
  * </p>
  */
-public class LetterCombinationsPhoneNumber {
+public class _17_LetterCombinationsPhoneNumber {
 
     // NOTE: the key here is that, all the elements in the result set will have the length equal to the input string.
     // so in the first iteration, add all the elements corresponding to the first digit, and in each of the next corresponding iterations, keep adding each character of the new digit array to each element of the previous result array

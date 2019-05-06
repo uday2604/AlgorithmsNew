@@ -10,7 +10,7 @@ import static org.junit.Assert.assertEquals;
  * This is a follow up problem to Search in Rotated Sorted Array, where nums may contain duplicates.
  * <p>
  */
-public class SearchSortedArrayWithDups {
+public class _81_SearchSortedArrayWithDups {
 
     private static boolean search(int[] nums, int target) {
         int start = 0, end = nums.length - 1, mid = -1;

@@ -12,7 +12,7 @@ import java.util.HashMap;
  * Because nums[0] + nums[1] = 2 + 7 = 9, return [0, 1].
  * </p>
  */
-public class TwoSum {
+public class _1_TwoSum {
     private static int[] twoSum(int[] nums, int target) {
         if (nums == null || nums.length == 0) {
             return null;

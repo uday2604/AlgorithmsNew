@@ -12,7 +12,7 @@ import static org.testng.Assert.assertEquals;
  * Explanation: The answer is "abc", with the length of 3.
  * </p>
  */
-public class LongestSubstringWithoutRepeatingChars {
+public class _3_LongestSubstringWithoutRepeatingChars {
 
     // NOTE: take care of the last case: if the loop exits without a repeating character, max length should be explicitly calculated
     // Time Complexity: O(n^1), Space Complexity: O(1): as char array space is always a constant

@@ -10,7 +10,7 @@ import static org.junit.Assert.assertEquals;
  * You are given a target value to search. If found in the array return its index, otherwise return -1.
  * <p>
  */
-public class SearchSortedArray {
+public class _33_SearchSortedArray {
 
     // basically a modified version of binary search. if an array is rotated at an unknown index, one side of the index in that is still sorted. so check those conditions wisely.
     private static int search(int[] nums, int target) {

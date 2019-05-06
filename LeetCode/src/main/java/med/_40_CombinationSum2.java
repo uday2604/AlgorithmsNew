@@ -16,7 +16,7 @@ import static org.junit.Assert.assertEquals;
  * A solution set is: [[1, 7], [1, 2, 5], [2, 6], [1, 1, 6]]
  * <p/>
  */
-public class CombinationSum2 {
+public class _40_CombinationSum2 {
     private static List<List<Integer>> combinationSum2(int[] candidates, int target) {
         List<List<Integer>> resultList = new ArrayList<>();
         Arrays.sort(candidates);

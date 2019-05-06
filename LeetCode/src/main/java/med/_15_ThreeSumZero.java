@@ -19,7 +19,7 @@ import java.util.List;
  * ]
  * </p>
  */
-public class ThreeSumZero {
+public class _15_ThreeSumZero {
 
     // NOTE: the trick is to avoid the duplicates by incrementing and decrementing the pointers as necessary
     private static List<List<Integer>> threeSum(int[] nums) {

@@ -14,7 +14,7 @@ import java.util.List;
  * [[3],[1],[2],[1,2,3],[1,3],[2,3],[1,2],[]]
  * </p>
  */
-public class Subsets {
+public class _78_Subsets {
     private static List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> resultList = new ArrayList<>();
         Arrays.sort(nums);  // this is OPTIONAL as the subset order is not needed

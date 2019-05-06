@@ -4,8 +4,19 @@ import java.util.*;
 
 /**
  * Created by udaythota on 1/24/19.
+ * <p>
+ * Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
+ * Example 1:
+ * <p>
+ * Input: 3
+ * Output: "III"
+ * Example 2:
+ * <p>
+ * Input: 4
+ * Output: "IV"
+ * <p/>
  */
-public class IntegerToRoman {
+public class _12_IntegerToRoman {
 
     private static String intToRoman(int num) {
 
@@ -41,20 +52,18 @@ public class IntegerToRoman {
 
         int i = 0;
         while (num != 0) {
-
             while (num >= 1000) {
                 resultString.append("M");
                 num -= 1000;
             }
 
-            if(num==0) {
+            if (num == 0) {
                 return resultString.toString();
             }
 
             while (num >= numberList.get(i)) {
                 i++;
             }
-
 
             resultString.append(num == numberList.get(i) ? romanNumberMap.get(numberList.get(i)) : romanNumberMap.get(numberList.get(i - 1)));
             num -= num == numberList.get(i) ? numberList.get(i) : numberList.get(i - 1);

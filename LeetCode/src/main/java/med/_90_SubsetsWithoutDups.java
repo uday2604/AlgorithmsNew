@@ -12,7 +12,7 @@ import java.util.List;
  * Output:[[2],[1],[1,2,2],[2,2],[1,2],[]]
  * </p>
  */
-public class SubsetsWithoutDups {
+public class _90_SubsetsWithoutDups {
     private static List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> resultList = new ArrayList<>();
         Arrays.sort(nums);  // sorting is optional as the subset order in the final result is not needed
