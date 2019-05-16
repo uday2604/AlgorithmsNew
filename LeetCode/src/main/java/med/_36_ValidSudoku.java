@@ -16,7 +16,6 @@ public class _36_ValidSudoku {
 
     // simple logic: have the unique string combinations for row / column / block so when we add a duplicate, set returns false
     // block logic: all the 9 numbers in the block will have a same sequence number ("i/3 "-" j/3"), so if any duplicate element in the block is encountered, it returns false
-    // TODO: try a recursive / DP solution may be
     private static boolean isValidSudoku(char[][] board) {
         Set<String> seen = new HashSet<>();
         for (int i = 0; i < 9; ++i) {
