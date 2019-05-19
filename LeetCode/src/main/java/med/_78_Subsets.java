@@ -17,7 +17,7 @@ import java.util.List;
 public class _78_Subsets {
     private static List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> resultList = new ArrayList<>();
-        Arrays.sort(nums);  // this is OPTIONAL as the subset order is not needed
+        Arrays.sort(nums);  // this is OPTIONAL as the order of elements in the subset is not needed
         backTrack(resultList, new ArrayList<Integer>(), nums, 0);
         return resultList;
     }

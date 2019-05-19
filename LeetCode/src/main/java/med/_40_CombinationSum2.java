@@ -36,7 +36,7 @@ public class _40_CombinationSum2 {
                     continue;  // to skip the same elements as they CANNOT be reused
                 }
                 tempList.add(candidates[i]);
-                backtrack(resultList, tempList, candidates, remainingTarget - candidates[i], i + 1);  // IMPORTANT: as we CANNOT use reuse the same elements (any number of times) to generate the target value, it should be i+1 and NOT i
+                backtrack(resultList, tempList, candidates, remainingTarget - candidates[i], i + 1);  // IMPORTANT: as we CANNOT use reuse the same elements (any number of times) to generate the target value, start pointer should be i+1 and NOT i
                 tempList.remove(tempList.size() - 1);
             }
         }

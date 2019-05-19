@@ -12,10 +12,10 @@ import java.util.List;
  * Output:[[2],[1],[1,2,2],[2,2],[1,2],[]]
  * </p>
  */
-public class _90_SubsetsWithoutDups {
+public class _90_Subsets_II {
     private static List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> resultList = new ArrayList<>();
-        Arrays.sort(nums);  // sorting is optional as the subset order in the final result is not needed
+        Arrays.sort(nums);  // this is NEEDED to avoid processing the duplicates
         backTrack(resultList, new ArrayList<Integer>(), nums, 0);
         return resultList;
     }
@@ -33,6 +33,7 @@ public class _90_SubsetsWithoutDups {
     }
 
     public static void main(String[] args) {
-        System.out.println(subsets(new int[]{1,2,2}));
+        System.out.println(subsets(new int[]{1, 2, 2}));
+        System.out.println(subsets(new int[]{4, 4, 4, 1, 4}));
     }
 }
