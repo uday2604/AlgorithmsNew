@@ -14,7 +14,7 @@ import static org.testng.Assert.assertEquals;
 // Most of the DP solutions can / should be approached using 3 approaches:
 // Approach 1: Brute force / Simple Recursion (usually TC is O(2^n))
 // Approach 2: Memoization / Top Down Approach (Recursive with caching): Start from bigger problems (n, n-1..) and approach towards smaller cases (2, 1, 0..)
-// Approach 3: Tabulation / Bottom Up Approach (Iterative with caching): Start with smaller problems (0, 1, 1) and approach towards larger cases (n-1, 1,..)
+// Approach 3: Tabulation / Bottom Up Approach (Iterative with caching): Start with smaller problems (0, 1, 2..) and approach towards larger cases (n-1, 1,..)
 public class _62_UniquePaths {
 
     // Approach 1: BRUTE FORCE: simple recursion
