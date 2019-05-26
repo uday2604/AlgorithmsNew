@@ -39,7 +39,7 @@ public class _240_Search2DMatrix_II {
     }
 
     /*
-    Similar approach as the above solution except that we start from BOTTOM LEFT CORNER
+    Similar approach as the above solution except that we start from the BOTTOM LEFT CORNER
     TC: O(m+n)
      */
     private static boolean searchMatrixAlternate(int[][] matrix, int target) {
