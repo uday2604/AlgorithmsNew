@@ -21,7 +21,7 @@ public class _76_Search2DMatrix {
         int low = 0, high = (matrix.length * matrix[0].length) - 1;
 
         while (low <= high) {
-            int mid = (low + high) / 2;   // or mid = (low + high) >>> 1
+            int mid = (low + high) / 2;   // or mid = (low + high) >> 1
             int row = getRow(matrix, mid);
             int column = getColumn(matrix, mid);
 
@@ -44,7 +44,6 @@ public class _76_Search2DMatrix {
     private static int getColumn(int[][] matrix, int mid) {
         return mid % matrix[0].length;
     }
-
 
     public static void main(String[] args) {
         int[][] input = new int[][]{{1, 3, 5, 7}, {10, 11, 16, 20}, {23, 30, 34, 50}};
