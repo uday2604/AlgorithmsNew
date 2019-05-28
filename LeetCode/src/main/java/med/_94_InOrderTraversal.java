@@ -4,7 +4,7 @@ import java.util.*;
 
 /**
  * Created by udaythota on 5/27/19.
- * Given a binary tree, return the inorder traversal of its nodes' values.
+ * Given a binary tree, return the inorder traversal of its nodes values.
  */
 public class _94_InOrderTraversal {
     List<Integer> resultList = new ArrayList<>();
