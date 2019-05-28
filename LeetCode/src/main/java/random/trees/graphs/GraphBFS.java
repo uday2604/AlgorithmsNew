@@ -49,7 +49,7 @@ public class GraphBFS {
         node60.addNeighbour(node70);
         node50.addNeighbour(node70);
 
-        System.out.println("The BFS traversal of the graph is ");
+        System.out.println("The BFS traversal of the graph is: ");
         GraphBFS.bfsDirectedGraph(node40);
     }
 }
