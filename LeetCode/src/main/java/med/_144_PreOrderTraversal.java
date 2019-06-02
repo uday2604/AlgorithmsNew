@@ -15,12 +15,8 @@ public class _144_PreOrderTraversal {
     private List<Integer> preOrderTraversal(TreeNode root) {
         if (root != null) {
             resultList.add(root.val);
-            if (root.left != null) {
-                preOrderTraversal(root.left);
-            }
-            if (root.right != null) {
-                preOrderTraversal(root.right);
-            }
+            preOrderTraversal(root.left);
+            preOrderTraversal(root.right);
         }
         return resultList;
     }
@@ -73,7 +69,6 @@ public class _144_PreOrderTraversal {
         TreeNode root = new TreeNode(1);
         TreeNode node1 = new TreeNode(2);
         TreeNode node2 = new TreeNode(3);
-
         root.right = node1;
         node1.left = node2;
 
