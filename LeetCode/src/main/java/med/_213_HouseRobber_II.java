@@ -19,7 +19,6 @@ public class _213_HouseRobber_II {
     // core logic: the only difference for this when compared to house robber-I is that houses are circular here (meaning, first and last houses shouldn't be summed)
     // so divide the given input array to 2 input arrays (one which includes the first element and an other one without including it), do the same solution on both inputs, compare both the max and return the max out of them
     private static int rob(int[] nums) {
-
         if (nums == null || nums.length == 0) {
             return 0;
         }
@@ -43,7 +42,6 @@ public class _213_HouseRobber_II {
         }
         return memo[nums.length];
     }
-
 
     public static void main(String[] args) {
         assertEquals(rob(new int[]{2, 3, 2}), 3);
