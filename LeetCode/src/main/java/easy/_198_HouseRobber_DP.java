@@ -20,8 +20,7 @@ public class _198_HouseRobber_DP {
                  robbery of current house + loot from houses before the previous loot from the previous house robbery and any loot captured before that
                  rob(i) = Math.max( rob(i - 2) + currentHouseValue, rob(i - 1) )
                  See: https://leetcode.com/problems/house-robber/discuss/156523/From-good-to-great.-How-to-approach-most-of-DP-problems. for more details
-
-     */
+    */
 
     // trivial: recursion. TC: O(2^n)
     // top - bottom approach
@@ -37,7 +36,7 @@ public class _198_HouseRobber_DP {
     }
 
     // recursion with memoization. TC: O(n)
-    // top - bottom approach 
+    // top - bottom approach
     static int[] memo;
 
     private static int rob1(int[] nums) {
