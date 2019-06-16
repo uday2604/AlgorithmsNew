@@ -1,7 +1,9 @@
 package med;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
@@ -61,9 +63,59 @@ public class _207_CourseSchedule {
         return true;
     }
 
+    // this approach is based on BFS
+    // LC: 210: Course Schedule II - based on the exact same approach. so try to follow this
+    // TC: O(n)
+    private static boolean canFinishBFS(int numCourses, int[][] prerequisites) {
+        if (numCourses == 0 || prerequisites == null) {
+            return false;
+        }
+
+        int[] result = new int[numCourses], inDegree = new int[numCourses];
+        int index = 0;
+
+        for (int i = 0; i < prerequisites.length; i++) {   // build an in degree prerequisite map (number of prerequisites needed for each course)
+            inDegree[prerequisites[i][0]]++;
+        }
+
+        Queue<Integer> queue = new LinkedList<>();
+        for (int i = 0; i < numCourses; i++) {
+            if (inDegree[i] == 0) {
+                result[index++] = i;
+                queue.offer(i);    // push all the courses with ZERO prerequisites to queue
+            }
+        }
+
+        /*
+         NOTE: 1) queue is to maintain all the courses that can be processed (with no prerequisites)
+               2) for each course (say '1') with no prerequisite, iterate through the input prerequisites array, reduce the in degree count for all the courses with '1' as prerequisite
+               3) if the in degree count is zero (meaning there are no more prerequisites to this course), add it to the queue and repeat the same process
+               4) once the entire queue is processed, check if the result index == num courses, meaning all the courses have been successfully processed
+         */
+        while (!queue.isEmpty()) {
+            int courseWithNoPreReq = queue.poll();  // this course don't have any prerequisites
+            for (int i = 0; i < prerequisites.length; i++) {
+                if (prerequisites[i][1] == courseWithNoPreReq) {
+                    inDegree[prerequisites[i][0]]--;
+                    if (inDegree[prerequisites[i][0]] == 0) {   // when there are no in degree connections to this node, it cam be added to queue to process further
+                        result[index++] = prerequisites[i][0];
+                        queue.offer(prerequisites[i][0]);
+                    }
+                }
+            }
+        }
+        return index == numCourses;
+    }
+
     public static void main(String[] args) {
+        // test method: 1
         assertTrue(canFinish(2, new int[][]{{1, 0}}));
         assertTrue(canFinish(3, new int[][]{{0, 1}, {1, 2}}));
         assertFalse(canFinish(2, new int[][]{{1, 0}, {0, 1}}));
+
+        // test method: 2
+        assertTrue(canFinishBFS(2, new int[][]{{1, 0}}));
+        assertTrue(canFinishBFS(3, new int[][]{{0, 1}, {1, 2}}));
+        assertFalse(canFinishBFS(2, new int[][]{{1, 0}, {0, 1}}));
     }
 }
