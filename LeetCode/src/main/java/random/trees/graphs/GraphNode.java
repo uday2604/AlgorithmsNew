@@ -14,14 +14,8 @@ public class GraphNode {
         this.neighbours = new LinkedList<>();
     }
 
-    public int getData() {
-        return data;
-    }
-
-    public void setData(int data) {
-        this.data = data;
-    }
-
+    private boolean visited;
+    private List<GraphNode> neighbours;
     private int data;
 
     public boolean isVisited() {
@@ -32,19 +26,23 @@ public class GraphNode {
         this.visited = visited;
     }
 
-    private boolean visited;
-    private List<GraphNode> neighbours;
-
+    public void addNeighbour(GraphNode neighbourNode) {
+        this.neighbours.add(neighbourNode);
+    }
 
     public List<GraphNode> getNeighbours() {
         return this.neighbours;
     }
 
-    public void setNeighbours(List<GraphNode> neighbours) {
-        this.neighbours = neighbours;
+    public int getData() {
+        return data;
     }
 
-    public void addNeighbour(GraphNode neighbourNode) {
-        this.neighbours.add(neighbourNode);
+    public void setData(int data) {
+        this.data = data;
+    }
+
+    public void setNeighbours(List<GraphNode> neighbours) {
+        this.neighbours = neighbours;
     }
 }
