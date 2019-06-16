@@ -16,6 +16,7 @@ import static org.testng.Assert.assertTrue;
  * </p>
  */
 public class _207_CourseSchedule {
+
     private static boolean canFinish(int numCourses, int[][] prerequisites) {
         if (numCourses == 0 || prerequisites == null) {
             return true;
@@ -62,6 +63,7 @@ public class _207_CourseSchedule {
 
     public static void main(String[] args) {
         assertTrue(canFinish(2, new int[][]{{1, 0}}));
+        assertTrue(canFinish(3, new int[][]{{0, 1}, {1, 2}}));
         assertFalse(canFinish(2, new int[][]{{1, 0}, {0, 1}}));
     }
 }
