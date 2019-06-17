@@ -41,11 +41,11 @@ public class _743_NetworkDelayTime_Djikstra_Algo {
 
         // use priority queue to process the next available shortest path nodes (custom priority queue based on the distance from the current vertex)
         // p[0] -> vertex, p[1] -> min distance from the K
-        PriorityQueue<int[]> distanceMap = new PriorityQueue<>((edge1, edge2) -> edge1[1] - edge2[1]);
-        distanceMap.offer(new int[]{K, 0});
+        PriorityQueue<int[]> priorityQueue = new PriorityQueue<>((edge1, edge2) -> edge1[1] - edge2[1]);
+        priorityQueue.offer(new int[]{K, 0});
 
-        while (!distanceMap.isEmpty()) {
-            int[] currentNode = distanceMap.poll();
+        while (!priorityQueue.isEmpty()) {
+            int[] currentNode = priorityQueue.poll();
             int currentNodeVal = currentNode[0];
             int currentDist = currentNode[1];
 
@@ -56,7 +56,7 @@ public class _743_NetworkDelayTime_Djikstra_Algo {
             if (graph.containsKey(currentNodeVal)) {
                 for (int[] neighbor : graph.get(currentNodeVal)) {
                     if (!distMap.containsKey(neighbor[0])) {
-                        distanceMap.offer(new int[]{neighbor[0], currentDist + neighbor[1]});
+                        priorityQueue.offer(new int[]{neighbor[0], currentDist + neighbor[1]});
                     }
                 }
             }
