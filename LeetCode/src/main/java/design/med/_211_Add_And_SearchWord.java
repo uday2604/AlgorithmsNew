@@ -97,6 +97,7 @@ public class _211_Add_And_SearchWord {
         trie.addWord("bad");
         trie.addWord("dad");
         trie.addWord("mad");
+
         /*assertFalse(trie.search("pad"));
         assertTrue(trie.search("bad"));
         assertTrue(trie.search(".ad"));
