@@ -24,7 +24,7 @@ public class _155_MinStack {
         Stack<Integer> stack;
         Stack<Integer> minStack;
 
-        public MinStackUsing2Stacks() {
+        MinStackUsing2Stacks() {
             stack = new Stack<>();
             minStack = new Stack<>();
         }
