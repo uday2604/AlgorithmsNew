@@ -2,6 +2,7 @@ package med;
 
 /**
  * Created by udaythota on 1/17/19.
+ * Given a linked list, remove the n-th node from the end of list and return its head.
  */
 public class _19_RemoveNthNodeFromEndLL {
     private Node head;
