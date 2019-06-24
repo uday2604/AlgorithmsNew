@@ -98,9 +98,7 @@ public class _232_ImplementQueueUsingStacks {
         }
     }
 
-
     public static void main(String[] args) {
-
         // test method 1
         QueueUsingStacks queue = new QueueUsingStacks();
         queue.push(1);

@@ -18,7 +18,6 @@ public class _17_LetterCombinationsPhoneNumber {
 
     // NOTE: the key here is that, all the elements in the result set will have the length equal to the input string.
     // so in the first iteration, add all the elements corresponding to the first digit, and in each of the next corresponding iterations, keep adding each character of the new digit array to each element of the previous result array
-    // TODO: also try a new solution using backtracking
     private static List<String> letterCombinations(String digits) {
 
         List<String> resultList = new ArrayList<String>();
@@ -47,11 +46,44 @@ public class _17_LetterCombinationsPhoneNumber {
         return resultList;
     }
 
+    // backtracking - dfs approach. similar to problem: 22
+    private static List<String> letterCombinationsRecursive(String digits) {
+        String[] dataArray = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+        List<String> result = new ArrayList<>();
+        if (digits == null || digits.length() == 0) {
+            return result;
+        }
+        helper(digits, 0, new StringBuilder(), dataArray, result);
+        return result;
+    }
+
+    private static void helper(String digits, int index, StringBuilder sb, String[] dataArray, List<String> result) {
+        if (digits.length() == index) {
+            result.add(sb.toString());
+            return;
+        }
+
+        String number = dataArray[digits.charAt(index) - '0'];
+        for (Character ch : number.toCharArray()) {
+            sb.append(ch);
+            helper(digits, index + 1, sb, dataArray, result);
+            sb.setLength(sb.length() - 1);
+        }
+    }
+
     public static void main(String[] args) {
+        // test - iterative approach
         System.out.println(letterCombinations("23"));
         System.out.println(letterCombinations("456"));
         System.out.println(letterCombinations("2"));
         System.out.println(letterCombinations("231"));  // should return empty list as it contains '1'
         System.out.println(letterCombinations(""));
+
+        // test - recursive approach
+        System.out.println(letterCombinationsRecursive("23"));
+        System.out.println(letterCombinationsRecursive("456"));
+        System.out.println(letterCombinationsRecursive("2"));
+        System.out.println(letterCombinationsRecursive("231"));  // should return empty list as it contains '1'
+        System.out.println(letterCombinationsRecursive(""));
     }
 }
