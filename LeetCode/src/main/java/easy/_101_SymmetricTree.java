@@ -49,7 +49,7 @@ public class _101_SymmetricTree {
                 return false;
             }
 
-            // push to queue in the right order 
+            // push to queue in the right order
             queue.offer(left.left);
             queue.offer(right.right);
             queue.offer(left.right);
