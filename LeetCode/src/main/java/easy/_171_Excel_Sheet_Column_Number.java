@@ -32,13 +32,13 @@ public class _171_Excel_Sheet_Column_Number {
     }
 
     public static void main(String[] args) {
-        // test case: 1
+        // test method: 1
         assertEquals(titleToNumber("A"), 1);
         assertEquals(titleToNumber("AB"), 28);
         assertEquals(titleToNumber("ZY"), 701);
         assertEquals(titleToNumber("CDA"), 2133);
 
-        // test case: 2
+        // test method: 2
         assertEquals(titleToNumber2("A"), 1);
         assertEquals(titleToNumber2("AB"), 28);
         assertEquals(titleToNumber2("ZY"), 701);
